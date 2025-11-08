@@ -1,12 +1,10 @@
 // Nama File : HalamanNotifikasi.java
 // Deskripsi : Halaman untuk menampilkan notifikasi sistem
 // Dibuat oleh : Muhammad Radithia Fatir
+// Dipush oleh : Muhammad Radithia Fatir
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class HalamanNotifikasi extends JPanel {
     private JPanel panelNotifikasi;
