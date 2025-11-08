@@ -8,7 +8,8 @@ import java.awt.*;
 public class HalamanLogin extends JPanel {
     private JTextField txtUsername;
     private JPasswordField txtPassword;
-    private JCheckBox chkIngatSaya;
+    private final JCheckBox chkIngatSaya;
+    
 
     public HalamanLogin(JFrame parent) {
         setLayout(new BorderLayout());
