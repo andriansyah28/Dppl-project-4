@@ -9,7 +9,6 @@ public class HalamanLogin extends JPanel {
     private JTextField txtUsername;
     private JPasswordField txtPassword;
     private final JCheckBox chkIngatSaya;
-    
 
     public HalamanLogin(JFrame parent) {
         setLayout(new BorderLayout());
@@ -18,19 +17,28 @@ public class HalamanLogin extends JPanel {
         panelKiri.setBackground(Color.WHITE);
         panelKiri.setLayout(new BorderLayout());
 
-        JLabel lblJudul = new JLabel("Sistem Perpustakaan Digital Kampus", SwingConstants.CENTER);
-        lblJudul.setFont(new Font("SansSerif", Font.BOLD, 26));
+        JLabel lblJudul = new JLabel("<html><b>Sistem Perpustakaan<br>Digital Kampus</b></html>",SwingConstants.CENTER);
+        lblJudul.setFont(new Font("SansSerif", Font.BOLD, 40));
         lblJudul.setForeground(new Color(50, 50, 50));
 
-        JLabel lblGambar = new JLabel("Perpustakaan.jpg", SwingConstants.CENTER);
-        lblGambar.setFont(new Font("SansSerif", Font.ITALIC, 18));
-        lblGambar.setForeground(Color.GRAY);
+        JLabel lblGambar = new JLabel();
+        lblGambar.setHorizontalAlignment(SwingConstants.CENTER);
+
+        try {
+            ImageIcon icon = new ImageIcon("Login.jpg");
+            Image img = icon.getImage().getScaledInstance(400, 300, Image.SCALE_SMOOTH);
+            lblGambar.setIcon(new ImageIcon(img));
+        } catch (Exception ex) {
+            lblGambar.setText("Gambar Halaman Login");
+            lblGambar.setFont(new Font("SansSerif", Font.ITALIC, 18));
+            lblGambar.setForeground(Color.GRAY);
+        }
 
         panelKiri.add(lblJudul, BorderLayout.NORTH);
         panelKiri.add(lblGambar, BorderLayout.CENTER);
-       
+
         JPanel panelKanan = new JPanel();
-        panelKanan.setBackground(new Color(180, 205, 230)); 
+        panelKanan.setBackground(new Color(180, 205, 230));
         panelKanan.setLayout(new GridBagLayout());
 
         GridBagConstraints gbc = new GridBagConstraints();
@@ -57,7 +65,7 @@ public class HalamanLogin extends JPanel {
         btnLogin.setFocusPainted(false);
 
         JLabel lblLupa = new JLabel("Lupa Password?", SwingConstants.RIGHT);
-        lblLupa.setFont(new Font("SansSerif", Font.PLAIN, 14));
+        lblLupa.setFont(new Font("SansSerif", Font.PLAIN, 12));
         lblLupa.setForeground(new Color(70, 70, 100));
 
         gbc.gridx = 0;
@@ -92,7 +100,7 @@ public class HalamanLogin extends JPanel {
                 parent.setContentPane(new HalamanUtama());
                 parent.revalidate();
             } else {
-                JOptionPane.showMessageDialog(parent, "Username atau password salah!","Error",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(parent, "Username atau password salah!", "Error",JOptionPane.ERROR_MESSAGE);
             }
         });
 
