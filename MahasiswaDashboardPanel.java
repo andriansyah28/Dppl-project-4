@@ -59,8 +59,8 @@ public class MahasiswaDashboardPanel extends JPanel {
         graphPanel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 300));
         graphPanel.setAlignmentX(Component.LEFT_ALIGNMENT);
         // Menambahkan 2 grafik sesuai mockup
-        graphPanel.add(createGraphImage("/assets/pengunjung_perpustakaan_chart.png", "ðŸ“Š Pengunjung Perpustakaan"));
-        graphPanel.add(createGraphImage("/assets/buku_dipinjam_chart.png", "ðŸ“– Buku yang Dipinjam"));
+        graphPanel.add(createGraphImage("/assets/pengunjung_perpustakaan_chart.png", "Pengunjung Perpustakaan"));
+        graphPanel.add(createGraphImage("/assets/buku_dipinjam_chart.png", "Buku yang Dipinjam"));
         content.add(graphPanel);
         content.add(Box.createVerticalGlue());
         return new JScrollPane(content, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
